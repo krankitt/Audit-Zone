@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -73,3 +74,7 @@ export default defineConfig([
 ])
 
 ```
+=======
+# Audit-Zone
+💃 A modern and responsive dance academy website built with React, TypeScript, Tailwind CSS, and Vite.
+>>>>>>> 36c155dbd66b8df7d1a2f61b7ce50aff8450eaad
