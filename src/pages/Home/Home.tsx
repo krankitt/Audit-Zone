@@ -1,7 +1,15 @@
-import React from "react";
+import Hero from "../../components/home/Hero/Hero";
+import Categories from "../../components/home/Categories/Categories";
+import FeaturedPlaylists from "../../components/home/FeaturedPlaylists/FeaturedPlaylists";
 
 const Home = () => {
-  return <div className="text-4xl lg:text-6xl md:text-10xl">Home</div>;
+  return (
+    <>
+      <Hero />
+      <Categories />
+      <FeaturedPlaylists />
+    </>
+  );
 };
 
 export default Home;
