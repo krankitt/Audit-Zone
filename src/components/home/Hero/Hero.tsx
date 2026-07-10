@@ -1,18 +1,18 @@
 import Container from "../../ui/Container";
 import logo from "../../../assets/logo.jpeg";
 import { Play } from "lucide-react";
-import { heroPlaylists } from "../../../data/heroPlaylists";
+import { heroPlaylists, heroStats } from "../../../data/heroPlaylists";
 
 const Hero = () => {
   return (
-    <section className="bg-zinc-950 py-6">
+    <section className="bg-zinc-950 py-12">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 min-h-[85vh]">
           <div className="max-w-2xl">
             <span className="inline-block bg-yellow-400/10 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">
               🚀 Learn Programming Faster
             </span>
-            <h1 className="mt-6 text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Master Programming <br /> Through Short &
               <span className="text-yellow-400"> Practical Tutorials</span>
             </h1>
@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 w-full max-w-lg shadow-2xl">
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 w-full max-w-lg lg:max-w-lg shadow-2xl hover:border-yellow-400/40 transition-all duration-300">
               <div className="flex justify-center">
                 <img
                   src={logo}
@@ -48,10 +48,20 @@ const Hero = () => {
                 {heroPlaylists.map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 rounded-lg bg-zinc-800 p-3 hover:bg-zinc-700 transition-colors cursor-pointer"
+                    className="flex items-center gap-3 rounded-lg bg-zinc-800 p-3 hover:bg-zinc-700 hover:translate-x-2 transition-all duration-300 cursor-pointer"
                   >
-                    <Play size={18} className="text-yellow-400" />{" "}
+                    <Play size={18} className="text-yellow-400" />
                     <span className="text-white">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-10 grid grid-cols-3 gap-6">
+                {heroStats.map((stat) => (
+                  <div className="text-center" key={stat.label}>
+                    <h3 className="text-3xl font-bold text-yellow-400">
+                      {stat.value}
+                    </h3>
+                    <p className="text-zinc-400 mt-1">{stat.label}</p>
                   </div>
                 ))}
               </div>
