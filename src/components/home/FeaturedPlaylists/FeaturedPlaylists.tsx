@@ -4,7 +4,7 @@ import { ArrowBigRight } from "lucide-react";
 
 const FeaturedPlaylists = () => {
   return (
-    <section className="bg-zinc-950 py-20">
+    <section id="featured-playlists" className="bg-zinc-950 py-20">
       <Container>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white">Featured Playlists</h2>
