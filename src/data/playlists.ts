@@ -1,4 +1,13 @@
-export const playlists = [
+export type Playlist = {
+  id: string;
+  title: string;
+  description: string;
+  level: string;
+  videos: number;
+  category: string;
+};
+
+export const playlists: Playlist[] = [
   {
     id: "java-masterclass",
     title: "Java Masterclass",
@@ -56,4 +65,5 @@ export const playlistCategories = [
   "JavaScript",
   "DSA",
   "HTML & CSS",
+  "TypeScript",
 ];

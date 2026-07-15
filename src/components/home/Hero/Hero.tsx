@@ -2,6 +2,8 @@ import Container from "../../ui/Container";
 import logo from "../../../assets/logo.jpeg";
 import { Play } from "lucide-react";
 import { heroPlaylists, heroStats } from "../../../data/heroPlaylists";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constants/routes";
 
 const Hero = () => {
   return (
@@ -21,9 +23,12 @@ const Hero = () => {
               organized playlists.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
+              <Link
+                to={ROUTES.PLAYLIST}
+                className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
+              >
                 Explore Playlists
-              </button>
+              </Link>
               <button className="border border-zinc-700 text-white px-6 py-3 rounded-lg hover:border-yellow-400 hover:text-yellow-400 transition-colors">
                 Visit YouTube
               </button>
