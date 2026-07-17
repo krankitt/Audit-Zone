@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Playlist } from "../../data/playlists";
 
 type PlaylistCardProps = {
@@ -13,9 +14,12 @@ const PlaylistCard = ({ playlist }: PlaylistCardProps) => {
       <h3 className="mt-5 text-2xl font-bold text-white">{playlist.title}</h3>
       <p className="mt-3 text-zinc-400 leading-7">{playlist.description}</p>
       <p className="mt-5 text-sm text-zinc-500">{playlist.videos} Videos</p>
-      <button className="mt-6 font-semibold text-yellow-400 cursor-pointer hover:underline">
+      <Link
+        className="mt-6 font-semibold text-yellow-400 cursor-pointer hover:underline"
+        to={playlist.id}
+      >
         View Playlist →
-      </button>
+      </Link>
     </div>
   );
 };
