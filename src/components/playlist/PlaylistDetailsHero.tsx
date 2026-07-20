@@ -27,8 +27,12 @@ const PlaylistDetailsHero = ({ playlist }: PlaylistDetailsHeroProps) => {
           {playlist.videos} Videos
         </span>
       </div>
-      <button className="mt-10 rounded-lg bg-yellow-400 px-8 py-3 font-semibold text-black transition-colors hover:bg-yellow-500">
-        {" "}
+      <button
+        onClick={() =>
+          window.open(playlist.playlistUrl, "_blank", "noopener,noreferrer")
+        }
+        className="mt-10 rounded-lg bg-yellow-400 px-8 py-3 font-semibold text-black transition-colors hover:bg-yellow-500"
+      >
         ▶ Watch Playlist
       </button>
     </div>
